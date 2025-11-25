@@ -8,7 +8,7 @@ def plot_posterior():
     print("--- Day 12: Visualizing The Truth ---")
     
     # Load accepted parameters
-    input_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'output', 'day11_accepted_params.csv'))
+    input_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'output', 'abc_accepted_params.csv'))
     if not os.path.exists(input_path):
         print(f"Error: Input file not found at {input_path}")
         print("Please run scripts/simulation_day11.py first.")
@@ -39,20 +39,20 @@ def plot_posterior():
     plt.ylabel("Density")
     plt.legend()
     
-    output_path_c = os.path.join(output_dir, "day12_posterior_c.png")
-    plt.savefig(output_path_c)
+    output_path = os.path.join(output_dir, 'abc_posterior_c.png')
+    plt.savefig(output_path)
     plt.close()
-    print(f"Saved posterior plot for 'c' to {output_path_c}")
+    print(f"Saved posterior plot for 'c' to {output_path}")
     
     # Plot 2: Joint Plot (c vs mu) - Optional but very cool
     plt.figure(figsize=(10, 10))
     g = sns.jointplot(data=df, x='c', y='mu', kind="kde", fill=True, cmap="Blues")
     g.fig.suptitle("Joint Posterior Distribution (c vs mu)", y=1.02)
     
-    output_path_joint = os.path.join(output_dir, "day12_posterior_joint.png")
-    plt.savefig(output_path_joint)
+    output_path = os.path.join(output_dir, 'abc_posterior_joint.png')
+    plt.savefig(output_path)
     plt.close()
-    print(f"Saved joint posterior plot to {output_path_joint}")
+    print(f"Saved joint posterior plot to {output_path}")
     
     print("\nVisualization Complete.")
 

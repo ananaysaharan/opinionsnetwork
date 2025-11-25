@@ -97,7 +97,7 @@ def run_parallel_abc(n_iterations=10000, epsilon=0.1, n_processes=None):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
-    output_path = os.path.join(output_dir, "day11_accepted_params.csv")
+    output_path = os.path.join(output_dir, 'abc_accepted_params.csv')
     with open(output_path, "w") as f:
         f.write("c,mu,distance\n")
         for p in accepted_params:

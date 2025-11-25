@@ -21,7 +21,7 @@ def run_robustness_check(n_runs=10):
     print("--- Day 13: Robustness Check ---")
     
     # Load accepted parameters
-    input_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'output', 'day11_accepted_params.csv'))
+    input_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'output', 'abc_accepted_params.csv'))
     if not os.path.exists(input_path):
         print(f"Error: Input file not found at {input_path}")
         return
